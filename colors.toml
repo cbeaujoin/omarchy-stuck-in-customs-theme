@@ -1,0 +1,39 @@
+# Stuck in Customs — an Omarchy theme after Trey Ratcliff's HDR portfolio.
+# Blue-hour indigo shadows, glowing lantern amber, and the cold teal of water
+# and sky at dusk. Palette sampled from the photographs in
+# https://stuckincustoms.smugmug.com/Portfolio
+
+mode = "dark"
+
+accent = "#e8874a"
+selection = "#26404a"
+muted = "#5d7c88"
+
+background = "#0d1a20"
+dark_background = "#091318"
+darker_background = "#060d11"
+lighter_background = "#172b33"
+
+# Lantern amber cooling into blue-hour teal, drawn around the focused window.
+hyprland_active_border = "#e8874a #58b2c9 45deg"
+
+foreground = "#e9ddca"
+dark_foreground = "#5e7d88"
+light_foreground = "#c6d4d5"
+bright_foreground = "#fdf4e8"
+
+red = "#e0604f"
+yellow = "#e3b455"
+orange = "#e8874a"
+green = "#83ab6f"
+cyan = "#58b2c9"
+blue = "#5f98d2"
+magenta = "#cb7ba1"
+brown = "#9c7550"
+
+bright_red = "#f2806c"
+bright_yellow = "#f3cb74"
+bright_green = "#a2c98c"
+bright_cyan = "#84cfe0"
+bright_blue = "#8ab8e6"
+bright_magenta = "#e09ab9"
