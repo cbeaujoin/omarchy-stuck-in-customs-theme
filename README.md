@@ -34,6 +34,7 @@ The name Omarchy shows comes from the directory: `stuck-in-customs` →
 | `icons.theme` | Yaru-yellow icon set |
 | `unlock.png` | Plymouth boot wordmark |
 | `preview.jpg` | theme switcher preview |
+| `preview-unlock.png` | boot screen preview |
 | `backgrounds/` | six wallpapers from the portfolio |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
