@@ -16,10 +16,11 @@ omarchy theme install https://github.com/cbeaujoin/omarchy-stuck-in-customs-them
 ```
 
 Omarchy clones the repo into `~/.config/omarchy/themes/stuck-in-customs` and
-lists it as *Stuck In Customs*. Nothing gets dropped on install: the repository
-ships colours, the icon set, previews, backgrounds and the unlock assets — no
-`.lua`, terminal config or `vscode.json`, which is all Omarchy strips from
-installed themes anyway.
+lists it as *Stuck In Customs*. It ships colours, the icon set, previews,
+backgrounds, the unlock assets, and one `hyprland.lua` that rounds the window
+corners. Omarchy strips `*.lua` from a theme it did not write, so on this route
+that file is the one thing it names as ignored, and the corners stay square —
+[Appearance](#appearance) has the two commands that set the same look by hand.
 
 If you would rather keep a working copy and apply it by hand:
 
@@ -27,6 +28,15 @@ If you would rather keep a working copy and apply it by hand:
 git clone https://github.com/cbeaujoin/omarchy-stuck-in-customs-theme \
   ~/.config/omarchy/themes/stuck-in-customs
 omarchy theme set "Stuck In Customs"
+```
+
+A `.git` directory in a theme is how Omarchy tells a stranger's clone from your
+own files, so this route strips the same files. To keep the corners, link your
+working copy in instead of cloning into place:
+
+```bash
+ln -s ~/src/omarchy-stuck-in-customs-theme \
+  ~/.config/omarchy/themes/stuck-in-customs
 ```
 
 Either way the boot screen is separate from the desktop theme — see
@@ -37,6 +47,7 @@ Either way the boot screen is separate from the desktop theme — see
 | File | Purpose |
 | --- | --- |
 | `colors.toml` | the whole palette; every generated app config is built from it |
+| `hyprland.lua` | rounded corners and the focused-border gradient |
 | `icons.theme` | Yaru-blue icon set |
 | `unlock.png` | Plymouth boot logo — the Temple of Heaven gateway |
 | `preview.jpg` | theme switcher preview |
@@ -45,10 +56,12 @@ Either way the boot screen is separate from the desktop theme — see
 | `.github/assets/preview-wallpapers.webp` | animated slideshow of all 28 wallpapers |
 | `.github/assets/swatches/` | one 18×18 SVG per palette colour, for the table below |
 
-`alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
-friends are **not** checked in: Omarchy regenerates them from `colors.toml`
-through `$OMARCHY_PATH/default/themed/*.tpl` on every `omarchy theme set`, which
-is also why the theme keeps working after an update.
+`alacritty.toml`, `ghostty.conf`, `btop.theme`, `shell.toml` and friends are
+**not** checked in: Omarchy regenerates them from `colors.toml` through
+`$OMARCHY_PATH/default/themed/*.tpl` on every `omarchy theme set`, which is also
+why the theme keeps working after an update. `hyprland.lua` is the exception —
+there is no colour to derive rounded corners from, and a template only renders
+files the theme does not already ship.
 
 The two `.github/assets/` entries are documentation only — the slideshow and the
 palette swatches, neither of which is a theme file. They live under a directory
@@ -91,6 +104,36 @@ Two departures from Aether's raw export, both in `colors.toml`:
 
 `muted` (`#5a5d57`) is the one deliberately dim token: 3.0:1 on the background,
 2.4:1 on `lighter_background`. Everything else that carries text is above 4.7:1.
+
+## Appearance
+
+Windows have **6 px rounded corners**, and the glass behind them comes from
+Omarchy's *Glassy* mode. Corners are a Hyprland setting rather than a colour, so
+they live in `hyprland.lua`, which also spells out the gradient border from the
+`accent` and `cyan` in `colors.toml`:
+
+```lua
+decoration = { rounding = 6, rounding_power = 3 }
+```
+
+Because the file replaces the template Omarchy would otherwise render, changing
+`hyprland_active_border` in `colors.toml` means editing `hyprland.lua` to match.
+
+A theme that Omarchy did not write may not run Lua — `omarchy theme install`,
+and any `git clone` that leaves a `.git` directory behind, drops `hyprland.lua`
+and says so. If you installed the theme that way, set both modes by hand:
+
+```bash
+omarchy hyprland corners rounded           # 6 px, as in the previews
+omarchy hyprland window transparency glassy
+```
+
+`omarchy hyprland corners theme` gives the corners back to this theme. Glassy
+cannot be shipped in a theme at all: it rewrites the terminal backgrounds
+(`ghostty.conf`, `kitty.conf`, `foot.ini`, `alacritty.toml`) at theme-set time,
+and those configs, like Lua, are exactly what an installed theme is not allowed
+to supply. It is a one-line choice instead, and it keeps its glass when you
+switch themes.
 
 ## Backgrounds
 
