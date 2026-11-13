@@ -159,6 +159,8 @@ manual picks. Rotation is off until you turn it on.
 The boot logo is Trey Ratcliff's *Approaching The Temple Of Heaven* — the gate
 seen from inside the door, which is the right picture for a passphrase prompt.
 
+![unlock screen](preview-unlock.png)
+
 It is not a wallpaper: Plymouth draws `logo.png` at its native pixel size,
 centred and **never scaled**, over a flat background (the `background` token),
 and places the passphrase field exactly 40 px below it. On a 5120×1440 panel a
