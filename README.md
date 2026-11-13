@@ -124,6 +124,31 @@ Filenames are lower-case descriptions of the scene; the numeric prefix only
 keeps `omarchy theme bg next` walking them in a sensible order (and decides the
 wallpaper a fresh install starts on).
 
+## Rotating them
+
+A theme that ships twenty-eight wallpapers should make cycling them easy. The
+recommended way is [**Omarchy Background Switcher**](https://plugins.omarchy.org/plugin.html?id=adarsh.background-switcher),
+a bar widget by Adarsh that previews this theme's backgrounds and rotates them
+on a timer:
+
+```bash
+omarchy plugin add https://github.com/TheComputeCenter/omarchy-background-switcher --enable
+omarchy bar move adarsh.background-switcher --section center --before omarchy.clock
+```
+
+It reads the same two folders Omarchy's own `omarchy theme bg` commands do —
+`~/.local/state/omarchy/current/theme/backgrounds/` and
+`~/.config/omarchy/backgrounds/<theme-name>/` — so these 28 files appear in it
+untouched, in filename order, and any extra shots you drop into
+`~/.config/omarchy/backgrounds/stuck-in-customs/` join them. It offers 5, 15, 30
+and 60 minute intervals (or 1–1440 custom), a random order, and a Next
+background button, and it switches with `omarchy theme bg set`, which does not
+re-derive the palette — rotating a wallpaper never moves the colors.
+
+Prefer that to a hand-rolled `systemd` timer: the widget only runs while the
+shell is up, remembers its deadline across restarts, and stays in sync with
+manual picks. Rotation is off until you turn it on.
+
 ## Unlock screen
 
 The boot logo is Trey Ratcliff's *Approaching The Temple Of Heaven* — the gate
