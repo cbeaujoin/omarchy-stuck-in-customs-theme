@@ -33,9 +33,9 @@ The name Omarchy shows comes from the directory: `stuck-in-customs` →
 | --- | --- |
 | `colors.toml` | the whole palette; every generated app config is built from it |
 | `icons.theme` | Yaru-blue icon set |
-| `unlock.png` | Plymouth boot wordmark |
+| `unlock.png` | Plymouth boot logo — the Temple of Heaven gateway |
 | `preview.jpg` | theme switcher preview |
-| `preview-unlock.png` | boot screen preview |
+| `preview-unlock.png` | unlock-screen preview, as the switcher renders it |
 | `backgrounds/` | 28 wallpapers from the portfolio |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
@@ -119,11 +119,30 @@ first file in sorted order — and it is also the shot in `preview.jpg`.
 | `26-shinjuku` | Trey Ratcliff – Series 2 – Shinjuku – 150cm |
 | `27-space-shuttle` | Final Night of the Space Shuttle |
 | `28-the-park` | thepark |
-| `29-the-park` | thepark |
 
 Filenames are lower-case descriptions of the scene; the numeric prefix only
 keeps `omarchy theme bg next` walking them in a sensible order (and decides the
 wallpaper a fresh install starts on).
+
+## Unlock screen
+
+The boot logo is Trey Ratcliff's *Approaching The Temple Of Heaven* — the gate
+seen from inside the door, which is the right picture for a passphrase prompt.
+
+It is not a wallpaper: Plymouth draws `logo.png` at its native pixel size,
+centred and **never scaled**, over a flat background (the `background` token),
+and places the passphrase field exactly 40 px below it. On a 5120×1440 panel a
+full-bleed image would push that field off the bottom of the screen, so
+`unlock.png` is a 1320×880 plate with a radial alpha fade, and the field lands
+at y=1200 with room to spare. `preview-unlock.png` is the same plate composited
+the way `omarchy plymouth preview` does it, at 1920×1080.
+
+Themes with these two files are listed under *Appearance → Unlock*; the boot
+screen is chosen separately from the desktop theme:
+
+```bash
+omarchy plymouth set by theme stuck-in-customs   # needs sudo
+```
 
 The photographs are **Trey Ratcliff's** — they are included only so the theme
 has matching wallpapers for personal desktop use. The palette itself (a set of
