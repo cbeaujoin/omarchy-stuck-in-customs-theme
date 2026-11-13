@@ -11,21 +11,26 @@ Foreground/background contrast: **14.4:1**.
 
 ## Install
 
-The theme is a plain Omarchy theme directory — no build step:
+```bash
+omarchy theme install https://github.com/cbeaujoin/omarchy-stuck-in-customs-theme
+```
+
+Omarchy clones the repo into `~/.config/omarchy/themes/stuck-in-customs` and
+lists it as *Stuck In Customs*. Nothing gets dropped on install: the repository
+ships colours, the icon set, previews, backgrounds and the unlock assets — no
+`.lua`, terminal config or `vscode.json`, which is all Omarchy strips from
+installed themes anyway.
+
+If you would rather keep a working copy and apply it by hand:
 
 ```bash
-git clone <this-repo> ~/.config/omarchy/themes/stuck-in-customs
+git clone https://github.com/cbeaujoin/omarchy-stuck-in-customs-theme \
+  ~/.config/omarchy/themes/stuck-in-customs
 omarchy theme set "Stuck In Customs"
 ```
 
-Or, if the repository is published as `omarchy-stuck-in-customs-theme`:
-
-```bash
-omarchy theme install <repo-url>
-```
-
-The name Omarchy shows comes from the directory: `stuck-in-customs` →
-*Stuck In Customs*.
+Either way the boot screen is separate from the desktop theme — see
+[Unlock screen](#unlock-screen).
 
 ## What's here
 
