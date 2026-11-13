@@ -32,11 +32,11 @@ The name Omarchy shows comes from the directory: `stuck-in-customs` →
 | File | Purpose |
 | --- | --- |
 | `colors.toml` | the whole palette; every generated app config is built from it |
-| `icons.theme` | Yaru-yellow icon set |
+| `icons.theme` | Yaru-blue icon set |
 | `unlock.png` | Plymouth boot wordmark |
 | `preview.jpg` | theme switcher preview |
 | `preview-unlock.png` | boot screen preview |
-| `backgrounds/` | 29 wallpapers from the portfolio |
+| `backgrounds/` | 28 wallpapers from the portfolio |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
 friends are **not** checked in: Omarchy regenerates them from `colors.toml`
@@ -79,12 +79,12 @@ Two departures from Aether's raw export, both in `colors.toml`:
 
 ## Backgrounds
 
-Twenty-nine photographs, each rebuilt from the largest file SmugMug serves for
+Twenty-eight photographs, each rebuilt from the largest file SmugMug serves for
 it (the `5K` rendition, or the original where that is bigger) and encoded as
-WebP at 5120 px wide, so they are pixel-clean on a 5120×1440 display. The three
-portrait/square frames — Mont Saint-Michel, the Great Wall and the Space Shuttle
-— are cropped to 5120×1440 so they fill an ultrawide instead of losing their
-subject; everything else keeps its native aspect.
+WebP at 5120 px wide, so they are pixel-clean on a 5120×1440 display. The two
+portrait/square frames — the Great Wall and the Space Shuttle — are cropped to
+5120×1440 so they fill an ultrawide instead of losing their subject; everything
+else keeps its native aspect.
 
 `01-kyoto-bamboo-forest` is the one the theme opens on — Omarchy picks the
 first file in sorted order — and it is also the shot in `preview.jpg`.
@@ -94,31 +94,31 @@ first file in sorted order — and it is also the shot in `preview.jpg`.
 | `01-kyoto-bamboo-forest` | 4070581709_a1c668a779_o (bamboo forest, Kyoto) |
 | `02-queenstown-aurora` | Trey Ratcliff – Aurora Australis – Landing on the River – Queenstown |
 | `03-triple-terra` | Day 17 – Triple Terra big (Manarola, Cinque Terre) |
-| `04-mont-saint-michel` | trey-ratcliff-mont-saint-michel2sunset |
-| `05-venice-gondolas` | gondolafun (moored gondolas, Venice) |
-| `06-crimson-sunset` | untitled (317 of 468)-Edit |
-| `07-death-valley-mysterious-rocks` | Trey Ratcliff – Death Valley – Mysterious Rocks |
-| `08-egypt-pyramids` | Egypt Fun (38 of 119)_HDR |
-| `09-great-wall` | Great Wall (aerial, autumn) |
-| `10-guangxi-province-china` | Deep in the Guangxi Province of China |
-| `11-hawaii-waterfalls` | Trey Ratcliff – Hawaii – Pilot – Waterfalls |
-| `12-hobbiton-fireplace` | Hobbiton Fireplace |
-| `13-hong-kong-fun` | Hong Kong Fun (26 of 37) |
-| `14-jules-verne-experiments` | where jules verne would perform experiments on animalkind |
-| `15-kyoto-temple-blue-hour` | Untitled1_HDR copy (Kyoto at blue hour) |
-| `16-lijiang-at-night` | Lijiang at Night |
-| `17-lindis-pass` | Lindis (lupins, Lindis Pass) |
-| `18-long-road-new-zealand` | The Long Road in NZ |
-| `19-mighty-glacier` | Day 13 – Sunny Valley – The Mighty Glacier |
-| `20-milford-sound` | trey-ratcliff-milford10 |
-| `21-milford-sound-big-panorama` | untitled-102-Pano copy |
-| `22-monet-pond` | Day 24 – Monet Det – (14 of 123)_HDR copy |
-| `23-nameless-beach-spain` | Trey Ratcliff – Spain – Nameless Beach |
-| `24-new-york-fun` | New York Fun (254 of 279) |
-| `25-pink-sky` | Bonus – Pink Sky |
-| `26-queenstown-balloon` | Trey Ratcliff – Stuck In Customs – 16 (balloon over Lake Wakatipu) |
-| `27-shinjuku` | Trey Ratcliff – Series 2 – Shinjuku – 150cm |
-| `28-space-shuttle` | Final Night of the Space Shuttle |
+| `04-venice-gondolas` | gondolafun (moored gondolas, Venice) |
+| `05-crimson-sunset` | untitled (317 of 468)-Edit |
+| `06-death-valley-mysterious-rocks` | Trey Ratcliff – Death Valley – Mysterious Rocks |
+| `07-egypt-pyramids` | Egypt Fun (38 of 119)_HDR |
+| `08-great-wall` | Great Wall (aerial, autumn) |
+| `09-guangxi-province-china` | Deep in the Guangxi Province of China |
+| `10-hawaii-waterfalls` | Trey Ratcliff – Hawaii – Pilot – Waterfalls |
+| `11-hobbiton-fireplace` | Hobbiton Fireplace |
+| `12-hong-kong-fun` | Hong Kong Fun (26 of 37) |
+| `13-jules-verne-experiments` | where jules verne would perform experiments on animalkind |
+| `14-kyoto-temple-blue-hour` | Untitled1_HDR copy (Kyoto at blue hour) |
+| `15-lijiang-at-night` | Lijiang at Night |
+| `16-lindis-pass` | Lindis (lupins, Lindis Pass) |
+| `17-long-road-new-zealand` | The Long Road in NZ |
+| `18-mighty-glacier` | Day 13 – Sunny Valley – The Mighty Glacier |
+| `19-milford-sound` | trey-ratcliff-milford10 |
+| `20-milford-sound-big-panorama` | untitled-102-Pano copy |
+| `21-monet-pond` | Day 24 – Monet Det – (14 of 123)_HDR copy |
+| `22-nameless-beach-spain` | Trey Ratcliff – Spain – Nameless Beach |
+| `23-new-york-fun` | New York Fun (254 of 279) |
+| `24-pink-sky` | Bonus – Pink Sky |
+| `25-queenstown-balloon` | Trey Ratcliff – Stuck In Customs – 16 (balloon over Lake Wakatipu) |
+| `26-shinjuku` | Trey Ratcliff – Series 2 – Shinjuku – 150cm |
+| `27-space-shuttle` | Final Night of the Space Shuttle |
+| `28-the-park` | thepark |
 | `29-the-park` | thepark |
 
 Filenames are lower-case descriptions of the scene; the numeric prefix only
