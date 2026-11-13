@@ -35,7 +35,7 @@ The name Omarchy shows comes from the directory: `stuck-in-customs` →
 | `unlock.png` | Plymouth boot wordmark |
 | `preview.jpg` | theme switcher preview |
 | `preview-unlock.png` | boot screen preview |
-| `backgrounds/` | six wallpapers from the portfolio |
+| `backgrounds/` | 29 wallpapers from the portfolio |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
 friends are **not** checked in: Omarchy regenerates them from `colors.toml`
@@ -67,14 +67,48 @@ hyprland_active_border = "#e8874a #58b2c9 45deg"
 
 ## Backgrounds
 
-All six are resized to 2560px wide:
+Twenty-nine photographs, each rebuilt from the largest file SmugMug serves for
+it (the `5K` rendition, or the original where that is bigger) and encoded as
+WebP at 5120 px wide, so they are pixel-clean on a 5120×1440 display. The three
+portrait/square frames — Mont Saint-Michel, the Great Wall and the Space Shuttle
+— are cropped to 5120×1440 so they fill an ultrawide instead of losing their
+subject; everything else keeps its native aspect.
 
-1. `01-queenstown-aurora` — Aurora Australis, Landing on the River, Queenstown
-2. `02-cinque-terre-blue-hour` — Cinque Terre at blue hour
-3. `03-lijiang-lanterns` — Lijiang at Night
-4. `04-guangxi-river` — Deep in the Guangxi Province of China
-5. `05-milford-sound` — Milford Sound
-6. `06-death-valley-dusk` — Death Valley, Mysterious Rocks
+| File | Title on stuckincustoms.com |
+| --- | --- |
+| `01-queenstown-aurora` | Trey Ratcliff – Aurora Australis – Landing on the River – Queenstown |
+| `02-triple-terra` | Day 17 – Triple Terra big (Manarola, Cinque Terre) |
+| `03-mont-saint-michel` | trey-ratcliff-mont-saint-michel2sunset |
+| `04-venice-gondolas` | gondolafun (moored gondolas, Venice) |
+| `05-crimson-sunset` | untitled (317 of 468)-Edit |
+| `06-death-valley-mysterious-rocks` | Trey Ratcliff – Death Valley – Mysterious Rocks |
+| `07-egypt-pyramids` | Egypt Fun (38 of 119)_HDR |
+| `08-great-wall` | Great Wall (aerial, autumn) |
+| `09-guangxi-province-china` | Deep in the Guangxi Province of China |
+| `10-hawaii-waterfalls` | Trey Ratcliff – Hawaii – Pilot – Waterfalls |
+| `11-hobbiton-fireplace` | Hobbiton Fireplace |
+| `12-hong-kong-fun` | Hong Kong Fun (26 of 37) |
+| `13-jules-verne-experiments` | where jules verne would perform experiments on animalkind |
+| `14-kyoto-bamboo-forest` | 4070581709_a1c668a779_o (bamboo forest, Kyoto) |
+| `15-kyoto-temple-blue-hour` | Untitled1_HDR copy (Kyoto at blue hour) |
+| `16-lijiang-at-night` | Lijiang at Night |
+| `17-lindis-pass` | Lindis (lupins, Lindis Pass) |
+| `18-long-road-new-zealand` | The Long Road in NZ |
+| `19-mighty-glacier` | Day 13 – Sunny Valley – The Mighty Glacier |
+| `20-milford-sound` | trey-ratcliff-milford10 |
+| `21-milford-sound-big-panorama` | untitled-102-Pano copy |
+| `22-monet-pond` | Day 24 – Monet Det – (14 of 123)_HDR copy |
+| `23-nameless-beach-spain` | Trey Ratcliff – Spain – Nameless Beach |
+| `24-new-york-fun` | New York Fun (254 of 279) |
+| `25-pink-sky` | Bonus – Pink Sky |
+| `26-queenstown-balloon` | Trey Ratcliff – Stuck In Customs – 16 (balloon over Lake Wakatipu) |
+| `27-shinjuku` | Trey Ratcliff – Series 2 – Shinjuku – 150cm |
+| `28-space-shuttle` | Final Night of the Space Shuttle |
+| `29-the-park` | thepark |
+
+Filenames are lower-case descriptions of the scene; the numeric prefix only
+keeps `omarchy theme bg next` walking them in a sensible order (and decides the
+wallpaper a fresh install starts on).
 
 The photographs are **Trey Ratcliff's** — they are included only so the theme
 has matching wallpapers for personal desktop use. The palette itself (a set of
