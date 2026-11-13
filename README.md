@@ -41,6 +41,7 @@ Either way the boot screen is separate from the desktop theme — see
 | `unlock.png` | Plymouth boot logo — the Temple of Heaven gateway |
 | `preview.jpg` | theme switcher preview |
 | `preview-unlock.png` | unlock-screen preview, as the switcher renders it |
+| `preview-wallpapers.webp` | animated slideshow of all 28 wallpapers |
 | `backgrounds/` | 28 wallpapers from the portfolio |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
@@ -93,6 +94,14 @@ else keeps its native aspect.
 
 `01-kyoto-bamboo-forest` is the one the theme opens on — Omarchy picks the
 first file in sorted order — and it is also the shot in `preview.jpg`.
+
+![the 28 wallpapers, one every 2.4 seconds](preview-wallpapers.webp)
+
+One loop of all 28, 2.4 s each, 67 s and 1.5 MB. It is an animated WebP because
+that is the only slideshow a GitHub README can have: the Markdown renderer
+escapes `<script>`, `<style>` and `<iframe>` and drops `<video>` outright, but
+passes an image tag through untouched — so the looping happens in the browser,
+not in the page.
 
 | File | Title on stuckincustoms.com |
 | --- | --- |
