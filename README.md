@@ -41,30 +41,38 @@ Either way the boot screen is separate from the desktop theme — see
 | `unlock.png` | Plymouth boot logo — the Temple of Heaven gateway |
 | `preview.jpg` | theme switcher preview |
 | `preview-unlock.png` | unlock-screen preview, as the switcher renders it |
-| `preview-wallpapers.webp` | animated slideshow of all 28 wallpapers |
 | `backgrounds/` | 28 wallpapers from the portfolio |
-| `swatches/` | one 18×18 SVG per palette colour, for the table below |
+| `.github/assets/preview-wallpapers.webp` | animated slideshow of all 28 wallpapers |
+| `.github/assets/swatches/` | one 18×18 SVG per palette colour, for the table below |
 
 `alacritty.toml`, `ghostty.conf`, `btop.theme`, `hyprland.lua`, `shell.toml` and
 friends are **not** checked in: Omarchy regenerates them from `colors.toml`
 through `$OMARCHY_PATH/default/themed/*.tpl` on every `omarchy theme set`, which
 is also why the theme keeps working after an update.
 
+The two `.github/assets/` entries are documentation only — the slideshow and the
+palette swatches, neither of which is a theme file. They live under a directory
+whose name starts with a dot because `omarchy theme set` stages an installed
+theme with `for entry in "$source"/*`, and that glob never matches a dot entry;
+this is the same reason a theme's `.git` and `.gitignore` never reach
+`~/.local/state/omarchy/current/theme/`. So they load from the repository for
+this README and are never copied onto the desktop.
+
 ## Palette
 
 | Token | Hex | | Role |
 | --- | --- | --- | --- |
-| `background` | `#040800` | <img src="swatches/040800.svg" width="18" height="18" alt="#040800"> | near-black with a green cast, the base surface |
-| `darker_background` | `#020400` | <img src="swatches/020400.svg" width="18" height="18" alt="#020400"> | the same black, two stops down |
-| `lighter_background` | `#1d211a` | <img src="swatches/1d211a.svg" width="18" height="18" alt="#1d211a"> | raised surfaces (bar, menus, panels) |
-| `accent` | `#5e76d5` | <img src="swatches/5e76d5.svg" width="18" height="18" alt="#5e76d5"> | iris blue: focused controls, selection, highlights |
-| `foreground` | `#d9dcc9` | <img src="swatches/d9dcc9.svg" width="18" height="18" alt="#d9dcc9"> | parchment body text, never pure white |
-| `cyan` | `#0ec2a6` | <img src="swatches/0ec2a6.svg" width="18" height="18" alt="#0ec2a6"> | sea green, the accent's counterweight |
-| `blue` | `#5e76d5` | <img src="swatches/5e76d5.svg" width="18" height="18" alt="#5e76d5"> | the same iris blue as the accent |
-| `magenta` | `#467fcd` | <img src="swatches/467fcd.svg" width="18" height="18" alt="#467fcd"> | periwinkle, for the third ANSI slot |
-| `green` | `#688900` | <img src="swatches/688900.svg" width="18" height="18" alt="#688900"> | olive |
-| `yellow` | `#e8db19` | <img src="swatches/e8db19.svg" width="18" height="18" alt="#e8db19"> | acid yellow — the loudest colour in the set |
-| `brown` | `#794739` | <img src="swatches/794739.svg" width="18" height="18" alt="#794739"> | dried clay |
+| `background` | `#040800` | <img src=".github/assets/swatches/040800.svg" width="18" height="18" alt="#040800"> | near-black with a green cast, the base surface |
+| `darker_background` | `#020400` | <img src=".github/assets/swatches/020400.svg" width="18" height="18" alt="#020400"> | the same black, two stops down |
+| `lighter_background` | `#1d211a` | <img src=".github/assets/swatches/1d211a.svg" width="18" height="18" alt="#1d211a"> | raised surfaces (bar, menus, panels) |
+| `accent` | `#5e76d5` | <img src=".github/assets/swatches/5e76d5.svg" width="18" height="18" alt="#5e76d5"> | iris blue: focused controls, selection, highlights |
+| `foreground` | `#d9dcc9` | <img src=".github/assets/swatches/d9dcc9.svg" width="18" height="18" alt="#d9dcc9"> | parchment body text, never pure white |
+| `cyan` | `#0ec2a6` | <img src=".github/assets/swatches/0ec2a6.svg" width="18" height="18" alt="#0ec2a6"> | sea green, the accent's counterweight |
+| `blue` | `#5e76d5` | <img src=".github/assets/swatches/5e76d5.svg" width="18" height="18" alt="#5e76d5"> | the same iris blue as the accent |
+| `magenta` | `#467fcd` | <img src=".github/assets/swatches/467fcd.svg" width="18" height="18" alt="#467fcd"> | periwinkle, for the third ANSI slot |
+| `green` | `#688900` | <img src=".github/assets/swatches/688900.svg" width="18" height="18" alt="#688900"> | olive |
+| `yellow` | `#e8db19` | <img src=".github/assets/swatches/e8db19.svg" width="18" height="18" alt="#e8db19"> | acid yellow — the loudest colour in the set |
+| `brown` | `#794739` | <img src=".github/assets/swatches/794739.svg" width="18" height="18" alt="#794739"> | dried clay |
 
 The focused window is drawn with a gradient border from iris blue to sea green,
 set in `colors.toml`:
@@ -96,7 +104,7 @@ else keeps its native aspect.
 `01-kyoto-bamboo-forest` is the one the theme opens on — Omarchy picks the
 first file in sorted order — and it is also the shot in `preview.jpg`.
 
-![the 28 wallpapers, one every 2.4 seconds](preview-wallpapers.webp)
+![the 28 wallpapers, one every 2.4 seconds](.github/assets/preview-wallpapers.webp)
 
 One loop of all 28, 2.4 s each, 67 s and 1.5 MB. It is an animated WebP because
 that is the only slideshow a GitHub README can have: the Markdown renderer
