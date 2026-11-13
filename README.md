@@ -86,22 +86,25 @@ portrait/square frames — Mont Saint-Michel, the Great Wall and the Space Shutt
 — are cropped to 5120×1440 so they fill an ultrawide instead of losing their
 subject; everything else keeps its native aspect.
 
+`01-kyoto-bamboo-forest` is the one the theme opens on — Omarchy picks the
+first file in sorted order — and it is also the shot in `preview.jpg`.
+
 | File | Title on stuckincustoms.com |
 | --- | --- |
-| `01-queenstown-aurora` | Trey Ratcliff – Aurora Australis – Landing on the River – Queenstown |
-| `02-triple-terra` | Day 17 – Triple Terra big (Manarola, Cinque Terre) |
-| `03-mont-saint-michel` | trey-ratcliff-mont-saint-michel2sunset |
-| `04-venice-gondolas` | gondolafun (moored gondolas, Venice) |
-| `05-crimson-sunset` | untitled (317 of 468)-Edit |
-| `06-death-valley-mysterious-rocks` | Trey Ratcliff – Death Valley – Mysterious Rocks |
-| `07-egypt-pyramids` | Egypt Fun (38 of 119)_HDR |
-| `08-great-wall` | Great Wall (aerial, autumn) |
-| `09-guangxi-province-china` | Deep in the Guangxi Province of China |
-| `10-hawaii-waterfalls` | Trey Ratcliff – Hawaii – Pilot – Waterfalls |
-| `11-hobbiton-fireplace` | Hobbiton Fireplace |
-| `12-hong-kong-fun` | Hong Kong Fun (26 of 37) |
-| `13-jules-verne-experiments` | where jules verne would perform experiments on animalkind |
-| `14-kyoto-bamboo-forest` | 4070581709_a1c668a779_o (bamboo forest, Kyoto) |
+| `01-kyoto-bamboo-forest` | 4070581709_a1c668a779_o (bamboo forest, Kyoto) |
+| `02-queenstown-aurora` | Trey Ratcliff – Aurora Australis – Landing on the River – Queenstown |
+| `03-triple-terra` | Day 17 – Triple Terra big (Manarola, Cinque Terre) |
+| `04-mont-saint-michel` | trey-ratcliff-mont-saint-michel2sunset |
+| `05-venice-gondolas` | gondolafun (moored gondolas, Venice) |
+| `06-crimson-sunset` | untitled (317 of 468)-Edit |
+| `07-death-valley-mysterious-rocks` | Trey Ratcliff – Death Valley – Mysterious Rocks |
+| `08-egypt-pyramids` | Egypt Fun (38 of 119)_HDR |
+| `09-great-wall` | Great Wall (aerial, autumn) |
+| `10-guangxi-province-china` | Deep in the Guangxi Province of China |
+| `11-hawaii-waterfalls` | Trey Ratcliff – Hawaii – Pilot – Waterfalls |
+| `12-hobbiton-fireplace` | Hobbiton Fireplace |
+| `13-hong-kong-fun` | Hong Kong Fun (26 of 37) |
+| `14-jules-verne-experiments` | where jules verne would perform experiments on animalkind |
 | `15-kyoto-temple-blue-hour` | Untitled1_HDR copy (Kyoto at blue hour) |
 | `16-lijiang-at-night` | Lijiang at Night |
 | `17-lindis-pass` | Lindis (lupins, Lindis Pass) |
