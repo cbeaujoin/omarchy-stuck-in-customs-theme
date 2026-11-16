@@ -37,8 +37,8 @@ hl.config({
       render_power = 4,
       -- The accent (5e76d5) settled into the background (040800), so a shadow
       -- carries the palette's cool cast instead of dead black.
-      color = "rgba(0a112288)",
-      color_inactive = "rgba(0a112255)",
+      color = "rgba(0a1122a0)",
+      color_inactive = "rgba(0a112266)",
       offset = "0 6",
     },
   },

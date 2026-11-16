@@ -129,7 +129,7 @@ decoration = {
   rounding_power = 3,
   shadow = {
     enabled = true, range = 34, render_power = 4, offset = "0 6",
-    color = "rgba(0a112288)", color_inactive = "rgba(0a112255)",
+    color = "rgba(0a1122a0)", color_inactive = "rgba(0a112266)",
   },
 }
 ```
@@ -158,7 +158,7 @@ hl.config({
   decoration = {
     shadow = {
       enabled = true, range = 34, render_power = 4, offset = "0 6",
-      color = "rgba(0a112288)", color_inactive = "rgba(0a112255)",
+      color = "rgba(0a1122a0)", color_inactive = "rgba(0a112266)",
     },
   },
 })
