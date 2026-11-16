@@ -127,9 +127,16 @@ out the gradient border from the `accent` and `cyan` in `colors.toml`:
 decoration = {
   rounding = 6,
   rounding_power = 3,
-  shadow = { enabled = true, range = 34, render_power = 4, offset = "0 6" },
+  shadow = {
+    enabled = true, range = 34, render_power = 4, offset = "0 6",
+    color = "rgba(0a112288)", color_inactive = "rgba(0a112255)",
+  },
 }
 ```
+
+The shadow is not black: `0a1122` is the `accent` (`#5e76d5`) settled into the
+near-black `background` (`#040800`), so the drop reads cool like the rest of the
+palette instead of grey.
 
 Because the file replaces the template Omarchy would otherwise render, changing
 `hyprland_active_border` in `colors.toml` means editing `hyprland.lua` to match.
@@ -148,7 +155,12 @@ omarchy hyprland window transparency glassy
 ```lua
 -- ~/.config/hypr/looknfeel.lua
 hl.config({
-  decoration = { shadow = { enabled = true, range = 34, render_power = 4, offset = "0 6" } },
+  decoration = {
+    shadow = {
+      enabled = true, range = 34, render_power = 4, offset = "0 6",
+      color = "rgba(0a112288)", color_inactive = "rgba(0a112255)",
+    },
+  },
 })
 ```
 
