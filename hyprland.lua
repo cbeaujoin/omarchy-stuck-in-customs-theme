@@ -30,5 +30,14 @@ hl.config({
     -- the corners back to this file.
     rounding = 6,
     rounding_power = 3,
+
+    shadow = {
+      enabled = true,
+      range = 34,
+      render_power = 4,
+      color = "rgba(00000088)",
+      color_inactive = "rgba(00000055)",
+      offset = "0 6",
+    },
   },
 })
