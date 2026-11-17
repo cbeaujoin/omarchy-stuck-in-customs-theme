@@ -33,12 +33,13 @@ hl.config({
 
     shadow = {
       enabled = true,
-      range = 34,
+      range = 25,
       render_power = 4,
-      -- The accent (5e76d5) settled into the background (040800), so a shadow
-      -- carries the palette's cool cast instead of dead black.
-      color = "rgba(0a1122a0)",
-      color_inactive = "rgba(0a112266)",
+      -- Palette colours rather than black: focused windows glow sea-green cyan,
+      -- unfocused ones lighter_background. The alphas keep the halo from
+      -- swamping the window edge over a bright wallpaper.
+      color = "rgba(0ec2a666)",
+      color_inactive = "rgba(1d211a40)",
       offset = "0 6",
     },
   },

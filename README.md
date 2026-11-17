@@ -128,15 +128,18 @@ decoration = {
   rounding = 6,
   rounding_power = 3,
   shadow = {
-    enabled = true, range = 34, render_power = 4, offset = "0 6",
-    color = "rgba(0a1122a0)", color_inactive = "rgba(0a112266)",
+    enabled = true, range = 25, render_power = 4, offset = "0 6",
+    color = "rgba(0ec2a666)", color_inactive = "rgba(1d211a40)",
   },
 }
 ```
 
-The shadow is not black: `0a1122` is the `accent` (`#5e76d5`) settled into the
-near-black `background` (`#040800`), so the drop reads cool like the rest of the
-palette instead of grey.
+The shadow is a coloured halo rather than a black drop: focused windows glow
+`cyan` (`#0ec2a6`), unfocused ones settle to `lighter_background` (`#1d211a`). The alphas
+(`0x66`, `0x40`) keep it from swamping the window edge over a bright wallpaper,
+and `range` is 25 px with `offset "0 6"` so the halo reads as a soft shadow
+behind the window rather than a rim of light. `render_power 4` shapes
+the falloff ramp, not the strength.
 
 Because the file replaces the template Omarchy would otherwise render, changing
 `hyprland_active_border` in `colors.toml` means editing `hyprland.lua` to match.
@@ -157,8 +160,8 @@ omarchy hyprland window transparency glassy
 hl.config({
   decoration = {
     shadow = {
-      enabled = true, range = 34, render_power = 4, offset = "0 6",
-      color = "rgba(0a1122a0)", color_inactive = "rgba(0a112266)",
+      enabled = true, range = 25, render_power = 4, offset = "0 6",
+      color = "rgba(0ec2a666)", color_inactive = "rgba(1d211a40)",
     },
   },
 })
